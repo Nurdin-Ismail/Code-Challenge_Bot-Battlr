@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     fetch('http://localhost:4000/bots')
-    .then(res => res.json())
+    .then(res => res.json()) 
     .then((data) => {
       setBotData(data)
       console.log(botData)
@@ -30,7 +30,7 @@ function App() {
       <YourBotArmy/>
       <BotCollection 
       botData={botData}
-      
+
       
       />
       
