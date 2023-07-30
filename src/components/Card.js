@@ -14,7 +14,7 @@ function Card({id, name, catchphrase, health, damage, armour, image, botClass}){
                     <li>{name}</li>
                     <li>{botClass}</li>
                 </ul>
-                
+                 
 
 
             </div>
