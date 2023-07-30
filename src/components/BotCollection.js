@@ -8,7 +8,7 @@ function BotCollection({botData}){
         id={bot.id} 
         name={bot.name} 
         catchphrase={bot.catchphrase} 
-        health={bot.health}
+        health={bot.health} 
         damage={bot.damage}
         armour={bot.armour}
         image={bot.avatar_url}
