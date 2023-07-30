@@ -10,7 +10,7 @@ function BotCollection({botData}){
         catchphrase={bot.catchphrase} 
         health={bot.health} 
         damage={bot.damage}
-        armour={bot.armour}
+        armour={bot.armor}
         image={bot.avatar_url}
         botClass={bot.bot_class}
         
@@ -20,10 +20,14 @@ function BotCollection({botData}){
 
 
     return (
-        <div className="collectionArea">
-            <div>
+        <div className="main">
+
+            <main  className="collectionArea">
                 {cards}
-            </div>
+            </main>
+            
+                
+            
 
             
 
