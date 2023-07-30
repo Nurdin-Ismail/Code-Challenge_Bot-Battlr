@@ -1,23 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
+import React,{useState, useEffect} from 'react';
+import YourBotArmy from './components/YourBotArmy'
+import BotCollection from './components/BotCollection';
+
+
 
 function App() {
+  const [botData, setBotData] = useState([])
+  console.log(botData)
+
+  useEffect(() => {
+    fetch('http://localhost:4000/bots')
+    .then(res => res.json())
+    .then((data) => {
+      setBotData(data)
+      console.log(botData)
+
+    }
+      
+    )
+  }, [])
+  console.log(botData)
+  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <YourBotArmy/>
+      <BotCollection 
+      botData={botData}
+      
+      
+      />
+      
     </div>
   );
 }
