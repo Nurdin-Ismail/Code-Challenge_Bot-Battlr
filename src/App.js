@@ -46,38 +46,41 @@ function App() {
 
     setEnlisted(filtered)
     console.log(filtered)
-
- 
- 
- 
- 
- 
-    //   let arr = [{id:"apple",
-  // name:"hallo" }, {id:"mango"}, {id:"apple"},
-  //         {id:"orange"}, {id:"mango"}, {id:"mango"}];
-  //         console.log(arr)
-  
-          // const unique = arr.filter(
-          //   (obj, index) =>
-          //     arr.findIndex(
-          //       (item) => item.location === obj.location && item.id === obj.id
-          //     ) === index
-          // )
-          
-  //         /*
-  //            [
-  //               { name: 'Kate', location: 'New York' },
-  //               { name: 'Mike', location: 'New York' }
-  //            ]
-  //          */
-  //         console.log(unique);
   }
   
+  function handleRetract(bot){
+
+
+
+    const removebot = [...unfiltered]
+    const removefromstate = [...enlisted]
+
+    const retractBot = removebot.filter((botcard) => botcard.id !== bot.id)
+    console.log(retractBot)
+
+
+    setUnfiltered(retractBot)
+
+    const retractBot2 = removefromstate.filter((botcard) => botcard.id !== bot.id)
+    console.log(retractBot2)
+    setEnlisted(retractBot2)
+
+
+
+  }
+
+  function handleDelete(){
+
+  }
 
   return (
     <div className="App">
 
-      <YourBotArmy enlisted={enlisted} unfiltered={unfiltered} setUnfiltered={setUnfiltered}
+      <YourBotArmy enlisted={enlisted} 
+      unfiltered={unfiltered} 
+      setUnfiltered={setUnfiltered}
+      retract={handleRetract}
+      deleto={handleDelete}
       />
       <h1 className='enlist-heading'>Double-Click To Enlist</h1>
       <BotCollection 

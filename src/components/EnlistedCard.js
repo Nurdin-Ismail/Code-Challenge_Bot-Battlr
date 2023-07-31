@@ -1,8 +1,8 @@
 import React,{usestate} from "react";
 
-function EnlistedCard({id, name, catchphrase, health, damage, armour, image, botClass, bot}){
+function EnlistedCard({id, name, catchphrase, health, damage, armour, image, botClass, bot, retract, deleto}){
     return(
-        <div className="card" onClick={() => console.log(bot)}>
+        <div className="card" onClick={() => retract(bot)}>
             <div className="imeji">
                 <img src={image} alt="Robot Image" />
 

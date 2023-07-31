@@ -8,6 +8,26 @@ body{
   background-color: rgba(82, 216, 134, 0.671);
   min-height: 50vh;
   box-shadow: 1px 1px 10px 1px rgb(43, 5, 5);
+  flex-wrap: wrap;
+  
+  border-radius: 10px;
+  margin: 10px 0px;
+  overflow: hidden;
+ 
+  
+  
+  
+  
+  color: #fff;
+  
+
+  
+  
+  
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  position: inherit;
 }
 
 .collectionArea{

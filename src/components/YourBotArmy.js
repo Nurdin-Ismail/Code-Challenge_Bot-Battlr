@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from "react";
 import EnlistedCard from "./EnlistedCard";
 
-function YourBotArmy({enlisted, unfiltered, setUnfiltered}){
+function YourBotArmy({enlisted, unfiltered, setUnfiltered, retract, deleto}){
     const army = enlisted.map((bot) => {
         return <EnlistedCard 
         bot={bot}
@@ -14,6 +14,8 @@ function YourBotArmy({enlisted, unfiltered, setUnfiltered}){
         armour={bot.armor}
         image={bot.avatar_url}
         botClass={bot.bot_class}
+        retract={retract}
+        delete={deleto}
         
         />
     })
