@@ -1,9 +1,10 @@
 import React,{useState, useEffect} from "react";
 import Card from "./Card";
 
-function BotCollection({botData}){
+function BotCollection({botData, enlist}){
     const cards = botData.map((bot) => {
         return <Card 
+        bot={bot}
         key={bot.id} 
         id={bot.id} 
         name={bot.name} 
@@ -13,6 +14,8 @@ function BotCollection({botData}){
         armour={bot.armor}
         image={bot.avatar_url}
         botClass={bot.bot_class}
+
+        enlist={enlist}
         
         />
         
