@@ -66,13 +66,13 @@ function App() {
     setEnlisted(retractBot2)
 
 
-
+ 
   }
 
   function handleDelete(){
 
   }
-
+    
   return (
     <div className="App">
 
