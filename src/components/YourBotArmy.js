@@ -15,14 +15,22 @@ function YourBotArmy({enlisted, unfiltered, setUnfiltered, retract, deleto}){
         image={bot.avatar_url}
         botClass={bot.bot_class}
         retract={retract}
-        delete={deleto}
+        deleto={deleto}
         
         />
     })
     
     return (
-        <div className="enlistArea">
+        <div >
+           <div >
+            <h1 className="enlisted-heading">{army !== []? 'Your Army:' : {}}
+            </h1>
+           </div>
+           <div className="enlistArea">
             {army}
+
+           </div>
+            
 
         </div>
     )

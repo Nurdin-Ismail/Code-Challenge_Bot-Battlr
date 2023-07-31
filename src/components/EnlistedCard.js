@@ -1,4 +1,7 @@
 import React,{usestate} from "react";
+import heart from '../img/heart.png';
+import shield from '../img/shield.png';
+import thunder from '../img/thunder.png';
 
 function EnlistedCard({id, name, catchphrase, health, damage, armour, image, botClass, bot, retract, deleto}){
     return(
@@ -23,14 +26,25 @@ function EnlistedCard({id, name, catchphrase, health, damage, armour, image, bot
             <div className="catchphrase">
                 <p>{catchphrase}</p>
                 <ul className="stats">
-                    <li>{health}</li>
-                    <li>{damage}</li>
-                    <li>{armour}</li>
+                    
+                    <li>
+                        <img src={heart} alt="" />
+                        {health}
+                        </li>
+                    <li>
+                    <img src={thunder} alt="" />
+                        {damage}</li>
+                    <li>
+                    <img src={shield} alt="" />
+                        {armour}
+                        </li>
                 </ul>
 
             </div>
 
             <div >
+
+                <button onClick={() => deleto(bot)}>X</button>
                 
 
 

@@ -69,8 +69,18 @@ function App() {
  
   }
 
-  function handleDelete(){
+  function handleDelete(bot){
+    fetch(`http://localhost:4000/items/${bot.id}`, {
+    method: "DELETE",
+  })
+    .then((r) => r.json())
+    .then(() => handleDeleteBot(bot));
 
+  }
+
+  function handleDeleteBot(deletedbot) {
+    const updatedItems = botData.filter((bot) => bot.id !== deletedbot.id);
+    setBotData(updatedItems);
   }
     
   return (
