@@ -1,7 +1,7 @@
 import React from "react";
 import heart from '../img/heart.png';
 import shield from '../img/shield.png';
-import thunder from '../img/thunder.png'
+import thunder from '../img/thunder.png';
 
 
 

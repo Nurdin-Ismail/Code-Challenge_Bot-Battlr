@@ -23,7 +23,7 @@ function YourBotArmy({enlisted, unfiltered, setUnfiltered, retract, deleto}){
     return (
         <div >
            <div >
-            <h1 className="enlisted-heading">{army !== []? 'Your Army:' : {}}
+            <h1 className="enlisted-heading">{army === []? 'Your Army:' : 'Choose One from Each Class'}
             </h1>
            </div>
            <div className="enlistArea">

@@ -10,7 +10,7 @@ function App() {
   const [botData, setBotData] = useState([])
   const [enlisted, setEnlisted] = useState([])
   const [unfiltered, setUnfiltered] = useState([])
-  // console.log(enlisted)
+  console.log(enlisted)
   console.log(unfiltered)
 
   
@@ -21,7 +21,7 @@ function App() {
     .then(res => res.json()) 
     .then((data) => {
       setBotData(data)
-      
+      console.log(data)
 
     }
       
@@ -42,9 +42,17 @@ function App() {
           (item) => item.location === obj.location && item.id === obj.id
         ) === index
     )
+    const filteredof = inNeedOfFiltering.filter(
+      (obj, index) =>
+        inNeedOfFiltering.findIndex(
+          (item) => item.bot_class === obj.bot_class
+        ) === index
+    )
+
+    
     console.log(filtered)
 
-    setEnlisted(filtered)
+    setEnlisted(filteredof)
     console.log(filtered)
   }
   
