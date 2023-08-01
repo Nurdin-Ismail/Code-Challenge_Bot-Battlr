@@ -78,7 +78,7 @@ function App() {
   }
 
   function handleDelete(bot){
-    fetch(`http://localhost:4000/items/${bot.id}`, {
+    fetch(`https://bot-json.onrender.com/bots/${bot.id}`, {
     method: "DELETE",
   })
     .then((r) => r.json())
