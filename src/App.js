@@ -17,7 +17,7 @@ function App() {
   // console.log(botData)
 
   useEffect(() => {
-    fetch('http://localhost:4000/bots')
+    fetch('https://bot-json.onrender.com/bots')
     .then(res => res.json()) 
     .then((data) => {
       setBotData(data)
