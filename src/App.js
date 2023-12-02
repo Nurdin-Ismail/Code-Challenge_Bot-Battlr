@@ -17,7 +17,7 @@ function App() {
   // console.log(botData)
 
   useEffect(() => {
-    fetch('https://bot-json.onrender.com/bots')
+    fetch('https://db-battleofthebots.onrender.com/bots')
     .then(res => res.json()) 
     .then((data) => {
       setBotData(data)
